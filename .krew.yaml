@@ -1,0 +1,43 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: get-resources
+spec:
+  version: {{ .TagName }}
+  homepage: https://github.com/Sandeep-Prajapati/kubectl-get-resources
+  shortDescription: Get Kubernetes resources in CSV or YAML
+  description: |
+    This plugin collects Kubernetes resource details in CSV format or can
+    directly save resources (YAML) to the local filesystem using various flags
+    available.
+  platforms:
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    {{addURIAndSha "https://github.com/Sandeep-Prajapati/kubectl-get-resources/releases/download/{{ .TagName }}/kubectl-get-resources_{{ .TagName }}_darwin_amd64.tar.gz" .TagName }}
+    bin: kubectl-get-resources
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    {{addURIAndSha "https://github.com/Sandeep-Prajapati/kubectl-get-resources/releases/download/{{ .TagName }}/kubectl-get-resources_{{ .TagName }}_darwin_arm64.tar.gz" .TagName }}
+    bin: kubectl-get-resources
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    {{addURIAndSha "https://github.com/Sandeep-Prajapati/kubectl-get-resources/releases/download/{{ .TagName }}/kubectl-get-resources_{{ .TagName }}_linux_amd64.tar.gz" .TagName }}
+    bin: kubectl-get-resources
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    {{addURIAndSha "https://github.com/Sandeep-Prajapati/kubectl-get-resources/releases/download/{{ .TagName }}/kubectl-get-resources_{{ .TagName }}_linux_arm64.tar.gz" .TagName }}
+    bin: kubectl-get-resources
+  - selector:
+      matchLabels:
+        os: windows
+        arch: amd64
+    {{addURIAndSha "https://github.com/Sandeep-Prajapati/kubectl-get-resources/releases/download/{{ .TagName }}/kubectl-get-resources_{{ .TagName }}_windows_amd64.tar.gz" .TagName }}
+    bin: kubectl-get-resources.exe

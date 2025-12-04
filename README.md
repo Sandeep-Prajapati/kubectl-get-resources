@@ -57,7 +57,7 @@ Examples:
   kubectl get-resources --namespace=default --namespace=sample-namespace
 
   Get all resources created before a given time
-  kubectl get-resources --after=2025-08-10T09:39:09Z
+  kubectl get-resources --before=2025-08-10T09:39:09Z
 
   Get all resources created after a given time
   kubectl get-resources --after=2025-08-10T09:39:09Z
@@ -181,15 +181,6 @@ default_resources
 9 directories, 29 files
 ```
 
-**Note:** Using below group exclusions
-```
-$ cat ~/.get-resources-excluded-groups 
-events.k8s.io
-metrics.k8s.io
-image.openshift.io
-packages.operators.coreos.com
-# authorization.openshift.io
-```
 
 ## Author
 
