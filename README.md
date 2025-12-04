@@ -1,4 +1,3 @@
-# kubectl get-resources
 <p align="center">
   <a href="https://github.com/Sandeep-Prajapati/kubectl-get-resources">
     <img alt="kubectl get-resources logo" src="assets/get-resources-logo.png" width="140" />
