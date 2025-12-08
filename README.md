@@ -9,7 +9,7 @@
 A kubectl plugin that provides current state visibility into application resources. It works at both namespace and cluster scope, enabling you to capture resource details in CSV format or export them as YAML files directly to your local filesystem.
 
 
-## Installation (TBD)
+## Installation
 
 Can be installed with [krew](https://krew.sigs.k8s.io/) plugin manager:
 
